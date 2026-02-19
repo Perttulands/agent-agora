@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Athena's Agora — Build Your Own Autonomous Coding System</title>
+  <meta name="description" content="An autonomous AI coding system named after Greek mythology. Because life's too short for monitor-daemon-v2.">
+  <meta property="og:title" content="Athena's Agora">
+  <meta property="og:description" content="AI agents write your code. An owl makes sure they don't screw it up.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦉</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-owl" id="heroOwl" title="Try clicking me. Or don't. I'll be here either way.">🦉</div>
+      <h1>Athena's Agora</h1>
+      <p class="hero-tagline">An autonomous coding system with an unreasonable commitment<br>to naming things after Greek mythology.</p>
+      <p class="hero-sub">AI agents write your code. An owl makes sure they don't screw it up.<br>All on an 8GB VPS. Seriously.</p>
+      <a href="#the-pitch" class="hero-cta">Enter the Agora ↓</a>
+    </div>
+    <div class="hero-footnote">
+      <span class="hero-stat">88 anti-pattern rules</span>
+      <span class="hero-stat-sep">·</span>
+      <span class="hero-stat">26,000 msgs/sec</span>
+      <span class="hero-stat-sep">·</span>
+      <span class="hero-stat">0 messages lost</span>
+      <span class="hero-stat-sep">·</span>
+      <span class="hero-stat">1 very good dog</span>
+    </div>
+  </section>
+
+  <!-- THE PITCH -->
+  <section id="the-pitch" class="section section-warm">
+    <div class="container">
+      <h2>What If Your Code Wrote Itself?</h2>
+      <p class="lead">Not the autocomplete-a-line kind. The <em>"I woke up and three features were merged, tested, and deployed"</em> kind.</p>
+      <p>Athena's Agora is an open-source system where AI agents do the actual work of software development — writing code, reviewing it, testing it, merging it — while a coordinator named Athena orchestrates from the middle like a very opinionated switchboard operator.</p>
+      <p>You tell her what needs building. She figures out how, dispatches the agents, catches them when they screw up, and delivers verified results. Sometimes you wake up to finished features. Sometimes you wake up to a detailed explanation of why the feature is a bad idea. <span class="aside">(Both are valid outcomes.)</span></p>
+
+      <div class="callout">
+        <p><strong>The secret?</strong> There's no magic. It's tmux sessions, bash scripts, quality gates, and an AI that takes the work personally. The magic is in how the pieces fit together — and the fact that <em>you</em> can set this up. Today. On hardware you already own.</p>
+      </div>
+
+      <p>Every tool has a name from Greek mythology. Not because we're pretentious <span class="aside">(okay, maybe a little)</span>, but because the names <strong>fit</strong>. When your ops watchdog needs to be loyal and tireless, you don't call it <code>monitor-v2</code>. You call it Argus. And suddenly everyone knows exactly what it does.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="section">
+    <div class="container">
+      <h2>Five Ideas. That's the Whole System.</h2>
+      <p class="lead">Everything else is implementation detail.</p>
+
+      <div class="concepts">
+        <div class="concept" data-emoji="🧵">
+          <h3>Everything is a Bead</h3>
+          <p>Every task, bug, feature, and <span class="aside">"oh god what happened"</span> is a <strong>bead</strong> on the loom. Agents create them, work them, close them. Athena makes sure they don't lie about it.</p>
+        </div>
+        <div class="concept" data-emoji="♻️">
+          <h3>Agents Are Disposable</h3>
+          <p>Spin up a coding agent, point it at a bead, let it run. When it's done — or when it's made a mess — kill it. Spin up a fresh one. No emotional attachment. No "let's see if it figures it out." Fresh context is a <em>feature</em>.</p>
+        </div>
+        <div class="concept" data-emoji="⚔️">
+          <h3>Nothing Passes the Gate</h3>
+          <p>The centaur runs your tests, your linter, your anti-pattern scans. The full gauntlet. He doesn't care how clever the code is. If the tests don't pass, the gate doesn't open. <span class="aside">He doesn't care about your deadline either.</span></p>
+        </div>
+        <div class="concept" data-emoji="👁️">
+          <h3>The System Watches Itself</h3>
+          <p>A faithful dog checks everything every five minutes. If something's wrong, it files a report and sometimes fixes the problem before you wake up. Best colleague you'll ever have. Never asks for treats.</p>
+        </div>
+        <div class="concept" data-emoji="🔄">
+          <h3>Every Run Improves the Next</h3>
+          <p>Success or failure, every agent run feeds data back into the templates. The system gets better by using itself. The serpent eats its tail. Flowers grow where it bites.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- A DAY IN THE AGORA -->
+  <section id="a-day" class="section section-warm">
+    <div class="container">
+      <h2>A Tuesday in the Agora</h2>
+      <p class="lead">This actually happened. Most Tuesdays are like this.</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">02:14</div>
+          <div class="timeline-event">
+            <strong>Argus detects a memory leak.</strong> An agent left a node process running after finishing its task. Argus kills it, reclaims 400MB, files a bead tagged <code>orphan-process</code>, and goes back to watching.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">07:30</div>
+          <div class="timeline-event">
+            <strong>Perttu wakes up.</strong> Three beads were dispatched overnight. Two are merged. One failed Centurion's gate — the agent wrote clever code that didn't pass the linter. Centurion doesn't care about clever.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">08:15</div>
+          <div class="timeline-event">
+            <strong>Athena re-dispatches the failed bead</strong> with a note in the prompt: "The linter requires X. Do not get creative with the import order." Fresh agent. Fresh context. No grudges.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">08:22</div>
+          <div class="timeline-event">
+            <strong>Bead passes all four gates.</strong> Centurion merges to main. Seven minutes, start to finish. The agent will never know. It's already gone.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">09:00</div>
+          <div class="timeline-event">
+            <strong>Oathkeeper scans yesterday's transcripts.</strong> Finds one commitment — "I'll add error handling for the edge case in the next step" — that was never fulfilled. Creates a tracking bead. <span class="aside">The agent is long dead, but the promise lives on.</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">14:30</div>
+          <div class="timeline-event">
+            <strong>Five beads dispatched in parallel.</strong> Feature work. Each agent gets a tmux session, a prompt template optimized by the Learning Loop, and zero knowledge of the others. Relay handles any coordination messages.
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">16:45</div>
+          <div class="timeline-event">
+            <strong>Four pass. One needs rework.</strong> The Learning Loop records everything — what templates were used, which agents succeeded, what patterns appeared in the failures. Tomorrow's dispatches will be slightly better. <span class="aside">The serpent bites its tail.</span>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">23:59</div>
+          <div class="timeline-event">
+            <strong>Argus runs cycle #288 of the day.</strong> Everything's green. Disk at 34%. No orphans. No alerts. He'll keep watching. <span class="aside">He always keeps watching.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE CHARACTERS -->
+  <section id="characters" class="section">
+    <div class="container">
+      <h2>Meet the Agora</h2>
+      <p class="lead">Every tool is a character. Every character has a story.<br>These are the people — and one very good dog — who run the system.</p>
+
+      <div class="characters">
+
+        <div class="character">
+          <div class="character-image">
+            <img src="images/athena.jpg" alt="The Agora — where everything gets built" loading="lazy">
+          </div>
+          <div class="character-info">
+            <h3>The Agora</h3>
+            <span class="character-role">The Open City — Where Everything Gets Built</span>
+            <p>An open Greek civic space with marble columns threaded with circuits and floor mosaics that are half ancient geometry, half PCB traces. Little gladiator-builders run everywhere — carrying data tablets, constructing half-stone half-holographic structures. On a raised platform, Athena watches with the owl on her shoulder. Busy, alive, slightly chaotic.</p>
+            <p class="character-quote">"A construction site staffed by enthusiastic warriors who appear, build something, and vanish when the job is done."</p>
+            <a href="https://github.com/Perttulands/athena-workspace" class="character-link">athena-workspace →</a>
+          </div>
+        </div>
+
+        <div class="character character-reverse">
+          <div class="character-image">
+            <img src="images/argus.jpg" alt="Argus — the faithful hound" loading="lazy">
+          </div>
+          <div class="character-info">
+            <h3>Argus</h3>
+            <span class="character-role">The Faithful Dog</span>
+            <p>In the Odyssey, Argus waited twenty years for Odysseus to come home. He was old, neglected, lying on a pile of dung — and he was the <em>only one</em> who recognized his master. Loyalty like that doesn't need a hundred eyes. It needs one good heart.</p>
+            <p>Our Argus watches the server every five minutes. Never complains. Fixes problems before you know they exist. Files neat reports. The best colleague you'll ever have, and he runs on a cron job.</p>
+            <p class="character-quote">"Argus doesn't sleep. Argus doesn't blink. Argus has opinions about your disk usage."</p>
+            <a href="https://github.com/Perttulands/argus" class="character-link">argus →</a>
+          </div>
+        </div>
+
+        <div class="character">
+          <div class="character-image">
+            <img src="images/pantheon.jpg" alt="Centurion — the centaur inspector" loading="lazy">
+          </div>
+          <div class="character-info">
+            <h3>Centurion</h3>
+            <span class="character-role">The Centaur at the Gate</span>
+            <p>Half-wild, half-disciplined. A centaur in bronze armour standing before the gate to main. He runs your tests, your linter, your anti-pattern scans — the full gauntlet. He doesn't care about your feelings, your deadline, or your "it works on my machine."</p>
+            <p>Behind the gate: the main branch. Stable, tested, trusted. The centaur keeps it that way.</p>
+            <p class="character-quote">"Either your code is worthy, or the gate stays shut."</p>
+            <a href="https://github.com/Perttulands/athena-workspace" class="character-link">centurion.sh →</a>
+          </div>
+        </div>
+
+        <div class="character character-reverse">
+          <div class="character-image">
+            <img src="images/truthsayer.jpg" alt="Truthsayer — the law keeper" loading="lazy">
+          </div>
+          <div class="character-info">
+            <h3>Truthsayer</h3>
+            <span class="character-role">The Law Keeper</span>
+            <p>Every codebase has laws. Most code breaks them quietly — swallowed exceptions, silent fallbacks, tests that mock themselves. Truthsayer carries the Codex chained to his belt, 88 rules stitched into his robes, and a bronze monocle that sees what your linter won't.</p>
+            <p>He marks violations with his Red Quill. His ink is permanent. His cracked mirror shows the surface AND what's rotting underneath.</p>
+            <p class="character-quote">"He enforces the laws of the codebase. 88 rules. Zero tolerance."</p>
+            <a href="https://github.com/Perttulands/truthsayer" class="character-link">truthsayer →</a>
+          </div>
+        </div>
+
+        <div class="character">
+          <div class="character-image">
+            <img src="images/oathkeeper.jpg" alt="Oathkeeper — the Spartan controller" loading="lazy">
+          </div>
+          <div class="character-info">
+            <h3>Oathkeeper</h3>
+            <span class="character-role">The Binding Word</span>
+            <p>AI agents will confidently promise "I'll fix that in the next step" and then forget it ever happened. No guilt. No accountability. Just a broken promise buried in a transcript nobody reads.</p>
+            <p>Oathkeeper reads the transcripts. Finds the promises. Checks the receipts. The ancient Greeks swore by the River Styx, and if they broke that oath, even gods paid the price. We're less dramatic — but the principle holds.</p>
+            <p class="character-quote">"If you said you'd do it, we're going to check."</p>
+            <a href="https://github.com/Perttulands/oathkeeper" class="character-link">oathkeeper →</a>
+          </div>
+        </div>
+
+        <div class="character character-reverse">
+          <div class="character-image">
+            <img src="images/relay.jpg" alt="Relay — Hermes the messenger" loading="lazy">
+          </div>
+          <div class="character-info">
+            <h3>Relay</h3>
+            <span class="character-role">Hermes — The Messenger God</span>
+            <p>Winged sandals. Caduceus in hand. The fastest god on Olympus and the only one who genuinely enjoyed the commute. Hermes carried messages between gods, between worlds, between the living and the dead. He was the original API.</p>
+            <p>Our Relay carries messages between agents. Filesystem-based, zero message loss, 26,000 msgs/sec under stress test. No broker. No queue. No "have you tried restarting RabbitMQ?"</p>
+            <p class="character-quote">"No relay, no coordination. No coordination, no strategy."</p>
+            <a href="https://github.com/Perttulands/relay" class="character-link">relay →</a>
+          </div>
+        </div>
+
+        <div class="character">
+          <div class="character-image">
+            <img src="images/orchestration.jpg" alt="Athena Web — the loom room" loading="lazy">
+          </div>
+          <div class="character-info">
+            <h3>Athena Web</h3>
+            <span class="character-role">The Loom Room</span>
+            <p>Athena was the goddess of weaving. This is her web — literally. A dashboard where you can see every agent, every bead of work, every document, every run. Stand before the loom and see the whole tapestry.</p>
+            <p>No build step. No framework churn. No webpack config that's older than your dependencies. Vanilla JS. SSE for real-time. It loads fast and stays out of your way. <span class="aside">Revolutionary, we know.</span></p>
+            <p class="character-quote">"Where all the threads become visible."</p>
+            <a href="https://github.com/Perttulands/athena-web" class="character-link">athena-web →</a>
+          </div>
+        </div>
+
+        <div class="character character-reverse">
+          <div class="character-image">
+            <img src="images/ludus-magnus.jpg" alt="Ludus Magnus — the training ground" loading="lazy">
+          </div>
+          <div class="character-info">
+            <h3>Ludus Magnus</h3>
+            <span class="character-role">The Training Ground</span>
+            <p>The Ludus Magnus was the great gladiatorial training school next to the Colosseum. Fighters forged through repetition, evaluation, and ruthless selection. The ones who survived got better. The ones who didn't were replaced by their descendants.</p>
+            <p>Ludus Magnus does the same to AI prompts. Generate an agent, run it, score it, evolve it. Four parallel lineages competing. The prompts that work survive. Natural selection, applied to system prompts.</p>
+            <p class="character-quote">"You score, it evolves, you score again."</p>
+            <a href="https://github.com/Perttulands/ludus-magnus" class="character-link">ludus-magnus →</a>
+          </div>
+        </div>
+
+        <div class="character">
+          <div class="character-image">
+            <img src="images/learning-loop.jpg" alt="Learning Loop — the ouroboros" loading="lazy">
+          </div>
+          <div class="character-info">
+            <h3>Learning Loop</h3>
+            <span class="character-role">The Ouroboros — The Spiral Path</span>
+            <p>The serpent eating its own tail. Not death — perpetual self-renewal. Where it consumes itself, flowers grow.</p>
+            <p>Every agent run feeds data back into the templates. What worked gets amplified. What failed gets studied. Four nested loops — per-run, hourly, daily, weekly — each feeding the next. We started at 19% pass rate. The serpent is still eating. The garden is growing.</p>
+            <p class="character-quote">"Every ending feeds the next beginning."</p>
+            <a href="https://github.com/Perttulands/learning-loop" class="character-link">learning-loop →</a>
+          </div>
+        </div>
+
+        <div class="character character-reverse">
+          <div class="character-image">
+            <img src="images/system-layers.jpg" alt="Beads — the loom's thread" loading="lazy">
+          </div>
+          <div class="character-info">
+            <h3>Beads</h3>
+            <span class="character-role">The Loom's Thread</span>
+            <p>Athena was goddess of weaving. A loom has threads; threads are strung with beads. Each bead is a discrete unit of work — small, trackable, part of something larger. String enough together and you've woven something real.</p>
+            <p>Distributed, git-backed, agent-native. Created by <a href="https://github.com/steveyegge/beads">Steve Yegge</a> and adopted into the Agora because nothing else came close. <span class="aside">Also: worry beads. Because tracking agent work will absolutely give you something to worry about.</span></p>
+            <p class="character-quote">"The work tracker that lives in your git repo."</p>
+            <a href="https://github.com/steveyegge/beads" class="character-link">beads (by Yegge) →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- THE REAL TALK -->
+  <section id="real-talk" class="section section-warm">
+    <div class="container">
+      <h2>The Honest Part</h2>
+      <p class="lead">We could pretend this is a polished product. It isn't.<br>Here's what you're actually signing up for.</p>
+
+      <div class="real-talk-grid">
+        <div class="real-talk-item">
+          <h3>It runs on 8GB of RAM</h3>
+          <p>A single VPS. Not a Kubernetes cluster. Not "the cloud" with air quotes. One box, in Helsinki, running fifteen things that probably shouldn't fit on 8GB. <span class="aside">And yet.</span></p>
+        </div>
+        <div class="real-talk-item">
+          <h3>Agents are brilliant interns with amnesia</h3>
+          <p>Each one is incredibly capable for exactly one task. Then it finishes, and the next one arrives with absolutely no memory of what just happened. That's the design. You don't need continuity when you have good systems.</p>
+        </div>
+        <div class="real-talk-item">
+          <h3>Some days are pure chaos</h3>
+          <p>An agent refactors the test suite "while it's in there." Centurion rejects everything. Argus detects the CPU spike. You manage a cascade of well-intentioned destruction. <span class="aside">Also beautiful, in its own way.</span></p>
+        </div>
+        <div class="real-talk-item">
+          <h3>API credits are real money</h3>
+          <p>This system calls AI models. A lot. If you're on a budget, start small. If you're on an unlimited plan, start medium. Nobody starts large and keeps their accountant happy. <span class="aside">Nobody.</span></p>
+        </div>
+      </div>
+
+      <div class="callout callout-important">
+        <p>The point isn't that it's perfect. The point is that <strong>one person, one VPS, and a collection of tools with mythological names can ship software at a pace that would've required a team of ten two years ago.</strong></p>
+        <p>That's not a pitch. That's a Tuesday. <a href="#a-day">We showed you one</a>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GET STARTED -->
+  <section id="get-started" class="section">
+    <div class="container">
+      <h2>Enter the Agora</h2>
+      <p class="lead">You don't need permission. You don't need a team.<br>You need a Linux box, some API keys, and the willingness to let an owl manage your agents.</p>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Set Up the Workshop</h3>
+            <div class="code-block">
+              <pre><code>git clone https://github.com/Perttulands/athena-workspace.git ~/athena
+cd ~/athena
+./setup.sh</code></pre>
+              <button class="copy-btn" title="Copy to clipboard">copy</button>
+            </div>
+            <p>This gets you the workspace, scripts, templates, and the skeleton. The setup wizard asks for your hostname and user — everything else has sensible defaults.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Install the Arsenal</h3>
+            <div class="code-block">
+              <pre><code># The watchdog
+git clone https://github.com/Perttulands/argus.git ~/argus
+
+# The anti-pattern scanner
+go install github.com/Perttulands/truthsayer/cmd/truthsayer@latest
+
+# The commitment tracker
+go install github.com/Perttulands/oathkeeper/cmd/oathkeeper@latest
+
+# The work tracker
+npm install -g @beads/bd && bd init</code></pre>
+              <button class="copy-btn" title="Copy to clipboard">copy</button>
+            </div>
+            <p>Each tool is standalone. Use one, use all, use whatever combination fits your workflow. They're better together, but they don't require each other.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Install OpenClaw</h3>
+            <div class="code-block">
+              <pre><code>npm install -g openclaw
+openclaw init</code></pre>
+              <button class="copy-btn" title="Copy to clipboard">copy</button>
+            </div>
+            <p><a href="https://github.com/openclaw/openclaw">OpenClaw</a> is the gateway — the nervous system that connects your AI to the world. Messaging, scheduling, heartbeats, tool access. It's what makes the owl fly.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Make It Yours</h3>
+            <p>Write your own <code>SOUL.md</code>. Name your AI. Pick an emoji. Give it opinions and a voice. The Athena mythology is ours — yours will be different, and it should be.</p>
+            <p>The system works the same whether your AI is named Athena, Odin, or Gerald.</p>
+            <p class="aside">Although, between us, "Gerald's Agora" doesn't quite have the same ring to it.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE INVITATION -->
+  <section id="invitation" class="section section-warm">
+    <div class="container invitation-content">
+      <h2>You Can Do This</h2>
+      <p class="lead">This isn't for 10x engineers at FAANG companies with dedicated ML teams and infinite compute budgets.</p>
+      <p>This is for the person with a side project and a $20/month VPS. The freelancer who's tired of context-switching between five repos. The solo founder who needs to ship faster than humanly possible — so they made it <em>not</em> a human problem.</p>
+      <p>Every tool here is open source. Every tool is documented. Every tool was built by one person and an AI, on the same kind of hardware you probably already have.</p>
+      <p>The mythology isn't gatekeeping. It's an invitation. Come build something. Name your tools. Give your AI a soul. The agora is open. The owl is watching. There's room to build.</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <section class="section section-dark">
+    <div class="container footer-content">
+      <div class="footer-owl" title="🦉">🦉</div>
+      <p class="footer-tagline">Built on API credits, bash scripts, and the belief that<br>your tools should have names worth remembering.</p>
+      <div class="footer-links">
+        <a href="https://github.com/Perttulands/athena-workspace">GitHub</a>
+        <a href="https://github.com/Perttulands/athena-workspace/blob/main/mythology.md">The Mythology</a>
+        <a href="https://github.com/openclaw/openclaw">OpenClaw</a>
+        <a href="https://discord.com/invite/clawd">Community</a>
+      </div>
+      <p class="footer-credit">Made by <a href="https://github.com/Perttulands">Perttu Landström</a> & Athena</p>
+      <p class="footer-easter-egg" id="easterEgg"></p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
