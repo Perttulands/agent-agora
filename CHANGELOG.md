@@ -6,6 +6,9 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ## [Unreleased]
 
+### Added
+- "For Agents" section in README: install, what-this-is, and runtime usage for agent consumers
+
 ### Changed
 - Upgraded character banner images: Argus, Truthsayer, Oathkeeper, Relay, Athena Web, and Ludus Magnus now use dedicated banner artwork (banner-*.jpg)
 - Added character sigils (from images/sigils/) next to every character heading for visual identity
