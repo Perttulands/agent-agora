@@ -400,6 +400,17 @@ pre code {
   line-height: 1.5;
 }
 
+/* ---- Sigils ---- */
+
+.sigil {
+  height: 1.4em;
+  width: auto;
+  vertical-align: middle;
+  margin-right: 0.3em;
+  opacity: 0.85;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+}
+
 .character-role {
   display: inline-block;
   font-family: var(--font-display);
