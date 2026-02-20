@@ -6,7 +6,17 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 
 ## [Unreleased]
 
+## [2026-02-20]
+
+### Added
+- Sticky navigation bar that appears when scrolling past the hero section, with links to major sections.
+- "The Stack" section covering the technical infrastructure (tmux, systemd, Git, Claude+Codex, filesystem I/O, Bash+Go).
+- Twitter Card and Open Graph image meta tags for social sharing previews.
+- Focus-visible styles for keyboard navigation accessibility.
+- Semantic HTML: `<nav>`, `<main>`, `<footer>`, ARIA labels on key landmarks.
+
 ### Changed
+- Section ordering: Characters section now uses warm background, Real Talk is neutral, Get Started is warm, Invitation is neutral. Better visual rhythm.
 - README: mythology-forward rewrite — each README now reads like discovering a character in a world
 
 ### Added

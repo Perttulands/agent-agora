@@ -4,13 +4,25 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  // ---- Scroll progress bar ----
+  // ---- Scroll progress bar & sticky nav ----
   const progressBar = document.getElementById('scrollProgress');
+  const siteNav = document.getElementById('siteNav');
+  const heroHeight = document.querySelector('.hero')?.offsetHeight || 600;
+
   window.addEventListener('scroll', () => {
     const scrollTop = document.documentElement.scrollTop;
     const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
     const progress = (scrollTop / scrollHeight) * 100;
     progressBar.style.width = progress + '%';
+
+    // Show nav after scrolling past the hero
+    if (siteNav) {
+      if (scrollTop > heroHeight * 0.7) {
+        siteNav.classList.add('visible');
+      } else {
+        siteNav.classList.remove('visible');
+      }
+    }
   }, { passive: true });
 
   // ---- Scroll reveal animations ----

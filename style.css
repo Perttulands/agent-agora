@@ -49,6 +49,58 @@
   transition: width 0.1s linear;
 }
 
+/* ---- Navigation ---- */
+
+.site-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(26, 23, 20, 0.95);
+  backdrop-filter: blur(8px);
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
+}
+.site-nav.visible {
+  transform: translateY(0);
+}
+
+.nav-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.6rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 0.02em;
+}
+.nav-brand:hover {
+  color: var(--gold-light);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--parchment);
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: var(--gold);
+}
+
 /* ---- Reset & Base ---- */
 
 *, *::before, *::after {
@@ -460,6 +512,39 @@ pre code {
   margin-bottom: 0.5em;
 }
 
+/* ---- Stack Grid ---- */
+
+.stack-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.stack-item {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.04);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.stack-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.stack-item h3 {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  color: var(--gold);
+  margin-bottom: 0.5em;
+}
+
+.stack-item p {
+  font-size: 0.92rem;
+  margin-bottom: 0;
+}
+
 /* ---- Callout ---- */
 
 .callout {
@@ -640,6 +725,9 @@ pre code {
 @media (max-width: 768px) {
   html { font-size: 16px; }
 
+  .nav-links { gap: 0.8rem; }
+  .nav-links a { font-size: 0.7rem; }
+
   .hero h1 { font-size: 2.5rem; }
   h2 { font-size: 1.8rem; }
 
@@ -684,6 +772,17 @@ pre code {
   .container { padding: 0 1.2rem; }
   .hero-footnote { flex-direction: column; gap: 0.2em; }
   .hero-stat-sep { display: none; }
+
+  .nav-links a:nth-child(n+4) { display: none; }
+}
+
+/* ---- Focus Styles (Accessibility) ---- */
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 /* ---- Scroll Animations ---- */
